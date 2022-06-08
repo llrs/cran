@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+Created to centralize information scattered around different pages and different projects.
+
+Uses github actions to collect information from CRAN.
+
+Not officially affiliated with [CRAN](https://cran.r-project.org/ "CRAN website").

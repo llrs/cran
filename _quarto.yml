@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "CRAN dashboard"
+  reader-mode: true
+  site-url: "https://cran.llrs.dev"
+  opengraph: true
+  twitter-card:
+    creator: "@Lluis_Revilla"
+    description: "CRAN unofficial statistics"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+  page-footer:
+    border: false
+    left: Brought to you by [Lluís Revilla](https://llrs.dev)
+    right:
+      - icon: github
+        href: https://github.com/llrs/cran/
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    html-math-method: plain
+    anchor-sections: true
+    smooth-scroll: true
+    self-contained: false
+    link-external-icon: true
+    link-external-newwindow: true
+
+editor: visual
+

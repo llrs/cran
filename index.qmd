@@ -1,0 +1,17 @@
+---
+title: "CRAN"
+---
+
+This website collects and provides information about CRAN:
+
+-   Submission queue
+
+-   Package status
+
+-   Packages with intermittent issues
+
+-   Package history
+
+-   Dependencies
+
+Thanks
