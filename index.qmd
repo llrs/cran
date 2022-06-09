@@ -2,16 +2,41 @@
 title: "CRAN"
 ---
 
-This website collects and provides information about CRAN:
+This website collects and provides information about CRAN in order to analyse it procedure, maintainers behavior and detect possible problems and help developers and maintainers.
 
--   Submission queue
+-   Submission queue via [{cransays}](https://cransays.r-lib.org).
 
--   Package status
+-   Package status `tools::CRAN_check_results()` .
 
--   Packages with intermittent issues
+    This is a continuation of [CRAN checks API](https://docs.cranchecks.info/) collected by Scott Chamberlan available till 2022/11 accessible via [{cchecks}](https://docs.ropensci.org/cchecks/).
 
--   Package history
+-   Details of checks via `tools::CRAN_check_details()`
 
--   Dependencies
+    This has information about flags used.
+
+-   Additional checks about memory-access and long doubles via `tools::CRAN_check_issues()`.
+
+-   Packages with intermittent issues.
+
+    Provides a reduced list of packages with problems that might be due to random number generations or due to random failures.
+    This is a continuation of the standalone page [intermmittent failures](https://llrs.github.io/intermittent_failures/).
+
+-   Package history via `tools:::CRAN_archive_db()` .
+
+    Provides information about when packages were released.
+
+-   Current packages via `tools:::CRAN_current_db()`.
+
+-   Dependencies via [`tools::CRAN_package_db()`](https://search.r-project.org/R/refmans/tools/html/CRANtools.html).
+
+    [`utils::available.packages()`](https://search.r-project.org/R/refmans/utils/html/available.packages.html) filters some packages and depends on the machine used.
+
+-   Packages archived on CRAN via a PACKAGES file generated via [`tools::write_PACKAGES()`](https://search.r-project.org/R/refmans/tools/html/write_PACKAGES.html) and [`tools::update_PACKAGES()`](https://search.r-project.org/R/refmans/tools/html/update_PACKAGES.html).
+
+    This is a continuously updated report based on a [previous post](https://llrs.dev/post/2021/12/07/reasons-cran-archivals/).
+
+-   Alias via `tools:::CRAN_aliases_db()`.
+
+-   Rdxrefs via `tools:::CRAN_rdxrefs_db()`.
 
 Thanks
