@@ -44,17 +44,17 @@ extract_revision <- function(x) {
                            proto = data.frame(revision = character()))
     cbind(version, date, revision)
 }
-revision <- data.frame(version = character(),
-                       revision = character())
-library("future")
-library("future.apply")
-plan(multisession) ## Run in parallel on local computer
-er_catch <- function(i){
-    tryCatch(extract_revision(i), error = function(e) {
-        Sys.sleep(0.02)
-        extract_revision(i)
-    })}
-rev <- future_lapply(links, FUN = er_catch)
-revision <- do.call(rbind, rev)
-flavors_df <- cbind(flavors = flavors, flavors_df, revision)
-saveRDS(flavors_df, file = file_name("flavors_db", timestamp()))
+# revision <- data.frame(version = character(),
+#                        revision = character())
+# library("future")
+# library("future.apply")
+# plan(multisession) ## Run in parallel on local computer
+# er_catch <- function(i){
+#     tryCatch(extract_revision(i), error = function(e) {
+#         Sys.sleep(0.02)
+#         extract_revision(i)
+#     })}
+# rev <- future_lapply(links, FUN = er_catch)
+# revision <- do.call(rbind, rev)
+# flavors_df <- cbind(flavors = flavors, flavors_df, revision)
+# saveRDS(flavors_df, file = file_name("flavors_db", timestamp()))

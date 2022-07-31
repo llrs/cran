@@ -12,7 +12,7 @@ env:
 
 
 jobs:
-  BOE:
+  CRAN:
     if: "! contains(github.event.commits.*.message, 'skip ci')"
     runs-on: ubuntu-latest
     steps:
