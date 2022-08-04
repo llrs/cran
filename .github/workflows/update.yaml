@@ -39,7 +39,7 @@ jobs:
         run: Rscript save.R
       - name: Commit results
         run: |
-          git add *.RDS *.in || git commit -a -m 'Automatic commit to update data'
+          git add *.RDS *.in && git commit -a -m 'Automatic commit to update data'
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
